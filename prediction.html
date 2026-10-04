@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HealthAI - Disease Prediction</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="prediction.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+
+            <div>
+                <h2>HealthAI</h2>
+                <p>Smart Health Prediction</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#diseases">Diseases</a>
+            <a href="index.html#how-it-work">How It Works</a>
+        </nav>
+
+        <div class="nav-button">
+            <a href="login.html" class="login-button">Login</a>
+            <a href="register.html" class="reg-button">Register</a>
+        </div>
+
+    </header>
+
+
+    <!-- Prediction Page -->
+    <main class="prediction-page">
+
+        <div class="prediction-container">
+
+            <!-- Heading -->
+            <div class="prediction-header">
+
+                <div class="prediction-icon">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+
+                <h1>Disease Prediction</h1>
+
+                <p>
+                    Enter your symptoms and let HealthAI
+                    analyze them to predict the possible disease.
+                </p>
+
+            </div>
+
+
+            <!-- Form -->
+            <form id="predictionForm">
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="name">
+                        <i class="fa-solid fa-user"></i>
+                        Patient Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Age -->
+                <div class="form-group">
+
+                    <label for="age">
+                        <i class="fa-solid fa-calendar"></i>
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter your age"
+                        min="1"
+                        max="120"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Symptoms -->
+                <div class="form-group">
+
+                    <label>
+                        <i class="fa-solid fa-virus"></i>
+                        Select Your Symptoms
+                    </label>
+
+                    <div class="symptoms-grid">
+
+                        <label class="symptom">
+                            <input type="checkbox" value="fever">
+                            <span>Fever</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="cough">
+                            <span>Cough</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="headache">
+                            <span>Headache</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="fatigue">
+                            <span>Fatigue</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="body_pain">
+                            <span>Body Pain</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="sore_throat">
+                            <span>Sore Throat</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="cold">
+                            <span>Cold</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="vomiting">
+                            <span>Vomiting</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="nausea">
+                            <span>Nausea</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="stomach_pain">
+                            <span>Stomach Pain</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="breathing_problem">
+                            <span>Breathing Problem</span>
+                        </label>
+
+                        <label class="symptom">
+                            <input type="checkbox" value="chest_pain">
+                            <span>Chest Pain</span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Duration -->
+                <div class="form-group">
+
+                    <label for="duration">
+                        <i class="fa-solid fa-clock"></i>
+                        How long have you had these symptoms?
+                    </label>
+
+                    <select id="duration" required>
+
+                        <option value="">
+                            Select duration
+                        </option>
+
+                        <option value="1-2">
+                            1 - 2 Days
+                        </option>
+
+                        <option value="3-5">
+                            3 - 5 Days
+                        </option>
+
+                        <option value="6-10">
+                            6 - 10 Days
+                        </option>
+
+                        <option value="10+">
+                            More than 10 Days
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Button -->
+                <button type="submit" class="predict-button">
+
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                    Predict Disease
+
+                </button>
+
+            </form>
+
+
+            <!-- Result -->
+            <div class="prediction-result" id="predictionResult">
+
+                <div class="result-icon">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+
+                <h2>Prediction Result</h2>
+
+                <p id="resultText">
+                    Your prediction result will appear here.
+                </p>
+
+                <div class="accuracy">
+
+                    <span>Prediction Confidence</span>
+
+                    <strong id="confidence">
+                        --%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- Disclaimer -->
+            <div class="disclaimer">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                <p>
+                    <strong>Disclaimer:</strong>
+                    This prediction is for educational purposes only.
+                    It is not a substitute for professional medical advice,
+                    diagnosis or treatment.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 HealthAI. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="prediction.js"></script>
+
+</body>
+
+</html>

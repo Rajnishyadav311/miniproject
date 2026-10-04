@@ -1,0 +1,450 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f9fc;
+    color: #222;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    padding: 12px 6%;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #0d9488;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.logo h2 {
+    color: #0d9488;
+}
+
+.logo p {
+    font-size: 11px;
+    color: #777;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+}
+
+.navbar nav a:hover {
+    color: #0d9488;
+}
+
+.nav-button {
+    display: flex;
+    gap: 8px;
+}
+
+.login-button,
+.reg-button {
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.login-button {
+    color: #0d9488;
+    border: 1px solid #0d9488;
+}
+
+.reg-button {
+    background: #0d9488;
+    color: white;
+}
+
+
+/* ================= PAGE ================= */
+
+.prediction-page {
+    min-height: calc(100vh - 75px);
+
+    padding: 50px 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.prediction-container {
+    width: 100%;
+    max-width: 850px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= HEADER ================= */
+
+.prediction-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.prediction-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    background: #e0f7f5;
+    color: #0d9488;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+.prediction-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.prediction-header p {
+    color: #777;
+    line-height: 1.6;
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group > label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.form-group label i {
+    color: #0d9488;
+    margin-right: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #0d9488;
+}
+
+
+/* ================= SYMPTOMS ================= */
+
+.symptoms-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+.symptom {
+    border: 1px solid #ddd;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    font-size: 14px;
+}
+
+.symptom:hover {
+    border-color: #0d9488;
+    background: #f0fdfa;
+}
+
+.symptom input {
+    margin-right: 7px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.predict-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #0d9488;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.predict-button:hover {
+    background: #087f75;
+
+    transform: translateY(-2px);
+}
+
+.predict-button i {
+    margin-right: 8px;
+}
+
+
+/* ================= RESULT ================= */
+
+.prediction-result {
+    display: none;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #f0fdfa;
+
+    border: 1px solid #b7ebe5;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 35px;
+    color: #0d9488;
+
+    margin-bottom: 10px;
+}
+
+.prediction-result h2 {
+    margin-bottom: 10px;
+}
+
+.prediction-result p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.accuracy {
+    margin-top: 20px;
+
+    padding: 12px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.accuracy strong {
+    color: #0d9488;
+}
+
+
+/* ================= DISCLAIMER ================= */
+
+.disclaimer {
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #fff8e6;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    gap: 10px;
+
+    color: #765d20;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.disclaimer i {
+    color: #e6a700;
+    margin-top: 3px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    background: #123;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .prediction-container {
+        padding: 30px 25px;
+    }
+
+    .symptoms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .login-button,
+    .reg-button {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .prediction-page {
+        padding: 25px 12px;
+    }
+
+    .prediction-container {
+        padding: 25px 18px;
+        border-radius: 15px;
+    }
+
+    .prediction-header h1 {
+        font-size: 26px;
+    }
+
+    .symptoms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .disclaimer {
+        font-size: 12px;
+    }
+}
+
+.prediction-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
+        url("prediction-background-hq.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
